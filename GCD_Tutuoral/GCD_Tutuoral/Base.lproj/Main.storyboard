@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GCD_Tutuoral" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-rP-vIg">
+                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <state key="normal" title="do Long Async Task In Serial Queue"/>
+                                <connections>
+                                    <action selector="doLongAsyncTaskInSerialQueue_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WgX-OR-I8F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG6-jx-RmT">
+                                <rect key="frame" x="20" y="90" width="335" height="30"/>
+                                <state key="normal" title="do Long Sync Task InS erialQueue"/>
+                                <connections>
+                                    <action selector="doLongSyncTaskInSerialQueue_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XdJ-ND-UhS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhS-N6-60P">
+                                <rect key="frame" x="20" y="140" width="335" height="30"/>
+                                <state key="normal" title="do Long ASync Task In Concurrent Queue"/>
+                                <connections>
+                                    <action selector="doLongASyncTaskInConcurrentQueue_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gs3-wW-6lo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps6-JI-0ZU">
+                                <rect key="frame" x="20" y="190" width="335" height="30"/>
+                                <state key="normal" title="do Long Sync Task In Concurrent Queue"/>
+                                <connections>
+                                    <action selector="doLongSyncTaskInConcurrentQueue_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="new-8m-fNV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODW-wj-NWV">
+                                <rect key="frame" x="20" y="240" width="335" height="30"/>
+                                <state key="normal" title="doMultipleSyncTaskWithinAsynchronousOperation"/>
+                                <connections>
+                                    <action selector="doMultipleSyncTaskWithinAsynchronousOperation_action" destination="BYZ-38-t0r" eventType="touchUpInside" id="SUK-4x-rzW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ofs-rP-vIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0lz-Yh-Vfz"/>
+                            <constraint firstItem="lG6-jx-RmT" firstAttribute="top" secondItem="ofs-rP-vIg" secondAttribute="bottom" constant="20" id="1p5-k4-E90"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ofs-rP-vIg" secondAttribute="trailing" constant="20" id="9Xh-DR-jbm"/>
+                            <constraint firstItem="ODW-wj-NWV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dl7-0e-BSp"/>
+                            <constraint firstItem="ODW-wj-NWV" firstAttribute="top" secondItem="Ps6-JI-0ZU" secondAttribute="bottom" constant="20" id="EjH-IE-M3p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jhS-N6-60P" secondAttribute="trailing" constant="20" id="Fel-SY-xDE"/>
+                            <constraint firstItem="ofs-rP-vIg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="IjY-O8-3or"/>
+                            <constraint firstItem="jhS-N6-60P" firstAttribute="top" secondItem="lG6-jx-RmT" secondAttribute="bottom" constant="20" id="PNd-IP-03G"/>
+                            <constraint firstItem="lG6-jx-RmT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QGI-sQ-Zor"/>
+                            <constraint firstItem="Ps6-JI-0ZU" firstAttribute="top" secondItem="jhS-N6-60P" secondAttribute="bottom" constant="20" id="W4g-jK-BOd"/>
+                            <constraint firstItem="jhS-N6-60P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pcG-c0-Ux5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ps6-JI-0ZU" secondAttribute="trailing" constant="20" id="tr4-aE-I8p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lG6-jx-RmT" secondAttribute="trailing" constant="20" id="tzj-cU-Jsj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ODW-wj-NWV" secondAttribute="trailing" constant="20" id="z24-HR-tfx"/>
+                            <constraint firstItem="Ps6-JI-0ZU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="z7K-vu-ZwK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
